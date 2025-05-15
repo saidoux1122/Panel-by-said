@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>saidoux panel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #111, #440000);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .panel {
+      background: #1a1a1a;
+      border: 2px solid gold;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 0 15px gold;
+    }
+    h1 {
+      color: gold;
+      margin-bottom: 20px;
+    }
+    input {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      width: 200px;
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 10px 20px;
+      background: crimson;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <h1>saidoux panel</h1>
+    <p>أدخل الكود للدخول:</p>
+    <input type="text" id="codeInput" placeholder="أدخل الكود هنا...">
+    <br />
+    <button onclick="checkCode()">دخول</button>
+    <div id="errorMsg" class="error"></div>
+  </div>
+
+  <script>
+    function checkCode() {
+      const code = document.getElementById('codeInput').value.trim();
+      const correctCode = 'saidoux.5K';
+      if (code === correctCode) {
+        window.location.href = 'https://www.instagram.com/panel_saidoux?igsh=MWY3NHJjNHhwZ3Fvag==';
+      } else {
+        document.getElementById('errorMsg').textContent = 'الكود غير صحيح';
+      }
+    }
+  </script>
+</body>
+</html>
